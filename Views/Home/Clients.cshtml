@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Список покупателей";
+}
+
+<h2>
+    Статистика покупок по клиентам
+</h2>
+<table>
+    <tr>
+        <td>Имя покупателя</td>
+        <td>Стоимость первой покупки</td>
+        <td>Стоимость второй покупки</td>
+        <td>Стоимость третьей покупки</td>
+        <td>Стоимость четвертой покупки</td>
+        <td>Стоимость пятой покупки</td>
+        <td>Стоимость шестой покупки</td>
+        <td>Текущая скидка</td>
+        <td></td>
+    </tr>
+    @foreach (var client in Model)
+    {
+        <tr>
+            <td>@client.Name</td>
+            <td>@client.Product_cost1</td>
+            <td>@client.Product_cost2</td>
+            <td>@client.Product_cost3</td>
+            <td>@client.Product_cost4</td>
+            <td>@client.Product_cost5</td>
+            <td>@client.Product_cost6</td>
+            <td>@client.Discount</td>
+        </tr>
+    }
+</table>

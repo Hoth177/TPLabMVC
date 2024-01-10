@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Список товаров";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <br>
+</div>
+<h2>
+    Магазин бытовой техники
+</h2>
+<table>
+    <tr>
+        <td>Название</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td><a href="~/Home/Buy?id=@product.Id&cost=@product.Price">Купить</a></td>
+        </tr>
+    }
+</table>
+
